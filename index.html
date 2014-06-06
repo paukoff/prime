@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime e-commerce agency | Разработка эффективных интернет-магазинов</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script> 
+        <script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/AnimOnScroll.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script>
+		$(document).ready(function(){
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.9,
+				maxDuration : 0.15,
+				viewportFactor : 0.2
+			} );
+		});
+		</script>
+        <script>
+            $(document).ready(function(){
+                $('.carousel').carousel({
+                       interval: 10000     
+                  });
+                  
+                $("nav ul li a, a.send-mail").click(function(event){
+
+                    event.preventDefault();
+                    var full_url = this.href;
+                    var parts = full_url.split("#");
+                    var trgt = parts[1];
+                    var target_offset = $("#"+trgt).offset();
+                    var target_top = target_offset.top;
+
+                    $('html,body').animate({scrollTop:target_top -80}, 800);
+                });
+                
+                $(".form1").validate({
+                    rules:{ 
+                         firstname:{
+                             required: true,
+                             minlength :2
+                         },
+                         lastname:{
+                             required: true,
+                             minlength :2
+                         },
+                         email:{
+                             required: true,
+                             email: true
+                         },
+                         text:{
+                             required: true,
+                             minlength :2
+                         },
+                         phone:{
+                            required: true,
+                            digits: true,
+                            minlength :7
+                         }
+                    }
+
+                 });
+                 $(".form2").validate({
+                    rules:{ 
+                         firstname1:{
+                             required: true,
+                             minlength :2
+                         },
+                         lastname1:{
+                             required: true,
+                             minlength :2
+                         },
+                         email1:{
+                             required: true,
+                             email: true
+                         },
+                         text1:{
+                             required: true,
+                             minlength :2
+                         },
+                         phone1:{
+                            required: true,
+                            digits: true,
+                            minlength :7
+                         }
+                    }
+
+                 });
+            });
+
+        </script>
+          <script>
+            $(window).load(function(){
+              $("header").sticky({ topSpacing: 0 });
+            });
+          </script>
+          
+    </head>
+    <body>
+        <section class="top-bg">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href=""><img src="img/logo.jpg" alt=""></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <nav>
+                            <ul>
+                                <li><a href="#header">О компании</a></li>
+                                <li><a href="#sect-1">Предложение</a></li>
+                                <li><a href="#process">Процесс</a></li>
+                                <li><a href="#case">Кейсы</a></li>
+                                <li><a href="#contact-b">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xs-3">
+                        <a class="send-mail pull-right" href="#contact-t">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="header" class="vedio-cont">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <span class="left-txt">e-commerce digital agency</span>
+                    </div>
+                    <div class="col-xs-3 col-xs-offset-6">
+                        <span class="phone">+7 499 706-85-54</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 main-title">
+                        <h1>Разработка технологичных и эффективных интернет-магазинов</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 main-content">
+                        <span>Прайм — это не классическая веб-студия и не рекламное агентство. Мы предлагаем<br> 
+                        экспертные решения на стыке веб-разработки и электронной торговли. </span>
+                    </div>
+                </div>
+                <div class="video-wrap">
+                      <img src="http://placehold.it/640x345" alt="">      
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="white-bg padd-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4 sect-1-l">
+                        <h2>Идеальный клиент</h2>
+                        <span class="green-con">Идеальный клиент для нас 
+                        (а мы для него) — это владелец 
+                        действующего интернет-магазина.</span>
+                        <span class="defoult-con">Продажи идут, бизнес работает. Но пришло понимание, что для качественного скачка, необходим качественно другой инструмент 
+                        продаж – новый технологичный сайт.</span>
+                    </div>
+                    <div class="col-xs-8 sect-1-r">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="img/img-1.jpg" alt="">
+                                <span>Действующий<br>интернет-магазин</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="img/img-2.jpg" alt="">
+                                <span>Оборот от<br>1 000 000 р. / мес.</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="img/img-3.jpg" alt="">
+                                <span>Желание вывести<br>магазин на новый уровень</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 border-top">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <span class="qusts-c">Почему мы предпочитаем<br>работать с действующими<br>интернет-магазинами?</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="defoult-con">Все просто. Люди, открывающие новый интернет-магазин, как правило на первом этапе хотят потестировать нишу и 
+                                попробовать интернет-продажи. Для таких случаев подходят шаблонные недорогие решения, либо обращение в небольшую 
+                                студию веб-дизайна. Те же, кто уже прошел этап старта и становления, понимают как важно в интернет-продажах обладать 
+                                мощным инструментарием. Они готовы инвестировать солидные деньги в разработку технологичного и современного 
+                                интернет-магазина.</span>
+                                <span class="small-letter">Однако если у вас пока нет интернет-продаж, но вы сразу настроены серьезным образом – 
+                                мы с удовольствием поможем вам в разработке качественного и эффективного интернет-магазина.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sect-1" class="sect-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2>Точки приложения наших усилий</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/interface.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Интерфейс</h3>
+                                        <span>Работаем над удобством интерфейса и структурой каталога.</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/conv.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Конверсия</h3>
+                                        <span>Минимизируем количество отказов на всех стадиях оформления заказа.</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/oform.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Оформление</h3>
+                                        <span>Прописываем гайдлайны презентации товаров. Если нужно – проводим фотосессию.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/check.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Средний чек</h3>
+                                        <span>Применяем собственные технологии повышения среднего чека.</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/commun.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Работа с базой</h3>
+                                        <span>Проектируем коммуникацию с клиентом после покупки, повышая процент повторных покупок.</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/adaptive.png" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h3>Адаптивность</h3>
+                                        <span>Адаптируем процессы продаж для мобильных устройств.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 circle">
+                        <div></div>
+                        <span class="green-con padding">Наша задача дать клиенту<br>мощный и легко масштабируемый<br>инструмент онлайн-продаж.</span>
+                    </div>     
+                </div>
+            </div>
+        </section>
+        <section id="process" class="sect-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 stages">
+                        <span>Этапы разработки</span>
+                        <span>Как мы добиваемся <br>высокой конверсии</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            </ol> 
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-xs-offset-3 slide-title">
+                                            <h2>Аналитика и проектирование</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 slide-img">
+                                            <img src="img/slide1.png" alt="">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span>Все начинается с этапа аналитики и проектирования, где мы закладываем основу нового 
+                                                интернет-магазина. Мы выделяем 5 основных задач, решаемых структурно: увеличение конверсии, 
+                                                повышение среднего чека, уменьшением количества отказов от оплаты на всех стадиях, повышение 
+                                                доверия к магазину и работа с базой покупателей.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-xs-offset-3 slide-title">
+                                            <h2>Дизайн</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 slide-img">
+                                            <img src="img/slide2.png" alt="">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span>Далее все прототипы передаются арт-директору и дизайнеру рабочей группы вашего проекта. 
+                                                На основании прототипов арт-директор рисует концепцию будущего дизайна. 
+                                                На этапе дизайна мы ориентируемся на простоту подачи информации – все должно быть не только 
+                                                красиво и стильно, но и понятно. Ничего не должно смущать пользователя на пути к покупке вашего 
+                                                товара.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-xs-offset-3 slide-title">
+                                            <h2>Разработка и тестирование</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 slide-img">
+                                            <img src="img/slide3.png" alt="">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span>Дальше макеты передаются нашим разработчикам, которые превращают красивые картинки в 
+                                                работающий инструмент, а тестировщики находят недочеты и составляют баг-листы. 
+                                                Спустя 2-3 месяца мы запускаем новый мощный и эффективный интернет магазин.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-xs-offset-3 slide-title">
+                                            <h2>Поддержка и развитие</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 slide-img">
+                                            <img src="img/slide4.png" alt="">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span>Интернет-магазин – это живой организм, который нужно постоянно анализировать и развивать. 
+                                                Планомерное повышение конверсии – это наша любимая задача. С удовольствием предложим вам 
+                                                после запуска проекта идеи по его развитию и реализуем их.</span>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                              <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+                              <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+                              
+                            <ol class="carousel-indicators select-img">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active img-1"></li>
+                                <li data-target="#myCarousel" data-slide-to="1" class="img-2"></li>
+                                <li data-target="#myCarousel" data-slide-to="2" class="img-3"></li>
+                                <li data-target="#myCarousel" data-slide-to="3" class="img-4"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mrg-top">
+                    <div class="col-xs-2">
+                        <span>Кто участвует<br>на данном этапе:</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="white-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 klients">
+                        <ul class="grid effect-2" id="grid">
+                            <li>
+                                <img src="img/bann1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann2.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann3.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann4.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann5.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann6.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann7.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann8.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann9.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/bann10.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="case" class="sect-3">
+            <div class="left-fl">
+                <div class="wrap-content-l">
+                    <h2>Сколько это стоит?</h2>
+                    <span class="icon-left"><span class="icon-anime pulse"></span><span class="small-letters">от</span>490 000 р.</span>
+                    <span class="text-context">Разработка интернет-магазина в нашей компании начинается<br>
+                    от 490 000 р. И вносится частями в течении срока разработки.<br>
+                    Как правило, чтобы начать с нами работать нужно иметь 200 000 р.</span>
+                </div>
+            </div>
+            <div class="right-fl">
+                <div class="wrap-content-r">
+                    <h2>Как долго окупается?</h2>
+                    <span class="icon-right"><span class="pulse"></span>3-4 месяца</span>
+                    <span class="text-context">Если брать средние значения увеличения конверсии на 15% и среднего чека на 25%, то при обороте от 1 000 000 р. 
+                    в месяц новый сайт окупается за 2-3 месяца.</span>
+                </div>
+            </div>
+        </section>
+        <section class="sect-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Кейсы</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <!--<ol class="carousel-indicators">
+                                <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-generic" data-slide-to="1"></li>
+                            </ol> -->
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="slide-wrap">
+                                                <div class="slide-head">
+                                                     <img src="img/slide-logo-1.jpg" alt="">
+                                                </div>
+                                                <div class="slide-body">
+                                                    <span>Интернет-магазин<br>офисной мебели</span>
+                                                    <span>Переработка<br>интернет-магазина</span>
+                                                </div>
+                                                <div class="slide-footer">
+                                                    <h3>Результат:</h3>
+                                                    <span>Конверсия <span>+32%</span></span>
+                                                    <span>Средний чек <span>+18%</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="slide-wrap">
+                                                <div class="slide-head">
+                                                    <img src="img/slide-logo-2.jpg" alt="">
+                                                </div>
+                                                <div class="slide-body">
+                                                    <span>Интернет-магазин<br>премиум бытовой техники</span>
+                                                    <span>Проектирование и<br>дизайн интерфейсов</span>
+                                                </div>
+                                                <div class="slide-footer">
+                                                    <h3>Результат:</h3>
+                                                    <span>Конверсия <span>1.35%</span></span>
+                                                    <span>Средний чек <span>79 730 p.</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="slide-wrap">
+                                                <div class="slide-head">
+                                                    <img src="img/slide-logo-3.jpg" alt="">
+                                                </div>
+                                                <div class="slide-body">
+                                                    <span>Интернет-магазин<br>шведской бытовой техники</span>
+                                                    <span>Переработка<br>интернет-магазина</span>
+                                                </div>
+                                                <div class="slide-footer">
+                                                    <h3>Результат:</h3>
+                                                    <span>Конверсия <span>1.71%</span></span>
+                                                    <span>Средний чек <span>17 560 p.</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-t" class="white-bg fix-form">
+            <form class="form1" method="post" action="call.php">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2>Заявка на разработку интернет-магазина</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="sp-form">Поля обязательны для заполнения *</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <input class="form-control" name="firstname" type="text" placeholder="Имя *">
+                            <input class="form-control" name="lastname" type="text" placeholder="Фамилия *">
+                            <input class="form-control" name="phone" type="text" placeholder="Телефон *">
+                            <input class="form-control" name="email" type="text" placeholder="Электронный адрес *">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                   <textarea name="text" class="form-control" placeholder="Кратко опишите, что продаете *"></textarea>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7">
+                                   <input class="form-control" type="text" placeholder="Адрес вашего сайта  (если есть)">
+                                </div> 
+                                <div class="col-xs-5">
+                                    <button class="btn btn-success">Отправить заявку</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="sect-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Еще 4 преимущества</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 all-color">
+                        <ul class="grid effect-7" id="grid">
+                            <li class="color1">
+                                <span>Качественная<br>настройка<br>гугл-аналитики</span>
+                            </li>
+                            <li class="color2">
+                                <span>Консультация<br>по внедрению<br>онлайн-консультанта</span>
+                            </li>
+                            <li class="color3">
+                                <span>Подключение системы<br>отслеживания<br>звонков</span>
+                            </li>
+                            <li class="color4">
+                                <span>Стратегия e-mail<br>маркетинга<br><span>+4 шаблона рассылок бесплатно</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sect-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>А что дальше?</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">
+                        <span class="green-content">Мы поддерживаем ваш проект —<br>оперативно вносим изменения на сайт,<br> добавляем функционал, тестируем и<br>
+                            предлагаем улучшения.</span>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="row">
+                            <div class="col-xs-6 man1">
+                                <span>Оперативные и<br>вежливые менеджеры</span>
+                            </div>
+                            <div class="col-xs-6 man2">
+                                <span>Проактивная команда — мы сами<br>предлагаем вам улучшения</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 border-brown"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span class="brown-con">После запуска интернет магазина, все только начинается!<br>
+                        Чтобы покупки шли – необходимо привлекать качественный трафик,<br>проводить рекламные кампании.</span>
+                    </div>
+                    <div class="col-xs-6 logo-small">
+                        <span>Консультация по интернет-рекламе<br>и коммерческое предложение<br>от нашего партнера</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-b" class="white-bg fix-form">
+            <form class="form2" name="contact" method="post" action="call.php">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2>Заявка на разработку интернет-магазина</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="sp-form">Поля обязательны для заполнения *</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <input class="form-control" name="firstname1" type="text" placeholder="Имя *">
+                            <input class="form-control" name="lastname1" type="text" placeholder="Фамилия *">
+                            <input class="form-control" name="phone1" type="text" placeholder="Телефон *">
+                            <input class="form-control" name="email1" type="text" placeholder="Электронный адрес *">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                   <textarea name="text1" class="form-control" placeholder="Кратко опишите, что продаете *"></textarea>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7">
+                                   <input class="form-control" name="url" type="text" placeholder="Адрес вашего сайта  (если есть)">
+                                </div> 
+                                <div class="col-xs-5">
+                                    <button id="sendmail" class="btn btn-success">Отправить заявку</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="map-wrap">
+            <div class="maps">
+                <div class="map-head">
+                    <a href=""><img src="img/big-logo.jpg" alt=""></a>
+                </div>
+                <div class="map-body">
+                    <span><span>Адрес:</span>г. Москва<br>ул. Садовая-Самотечная <br>12 корпус 1</span>
+                    <span><span>Телефон:</span>+7 499 706-85-54</span>
+                </div>
+            </div>
+            <iframe height="640" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps/ms?msa=0&amp;msid=212478934153496912185.0004fab97feef1bea3e41&amp;hl=ru&amp;ie=UTF8&amp;t=m&amp;ll=55.773097,37.616812&amp;spn=0.002897,0.006866&amp;z=18&amp;output=embed"></iframe>
+        </div>        
+   </body>
+</html>
